@@ -3,5 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ["@/assets/main.css"],
-  modules: ["nuxt-icons"]
+  modules: ["nuxt-icons", "@pinia/nuxt", "@nuxt/test-utils/module"]    
+
 })

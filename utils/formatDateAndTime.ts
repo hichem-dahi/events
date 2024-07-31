@@ -9,7 +9,7 @@ export function formatDateAndTime(dateStr: string, timeStr = '12:00') {
     year: 'numeric',    // Four-digit year (e.g., "2024")
     hour: 'numeric',    // Numeric hour (e.g., "8 PM")
     hour12: true        // Use 12-hour clock and show AM/PM
-  } as any;
+  };
 
   // Format the date using Intl.DateTimeFormat
   const formatter = new Intl.DateTimeFormat('en-US', options);
@@ -21,9 +21,5 @@ export function formatDateAndTime(dateStr: string, timeStr = '12:00') {
     return acc;
   }, {});
 
-  /* Construct the custom formatted date string
-  const customFormattedDate = `${dateParts.weekday}, ${dateParts.day}. ${dateParts.month} ${dateParts.year}`;
-  const customFormattedTime = `${dateParts.hour} ${dateParts.dayPeriod.toLowerCase()}`*/
-  
   return dateParts
 }

@@ -46,10 +46,10 @@ const formattedDateAndTimeHtml = computed(() => {
 .event-item {
   display: flex;
   flex-direction: row;
-  padding: 0 32px 32px 0;
+  padding: 0 32px 32px 0;  
+  margin-bottom: 32px;
   overflow-x: visible;
   transition: all 0.5s ease;
-  margin-bottom: 32px;
 
   @media screen and (max-width: 600px) {
     display: block;
@@ -74,7 +74,6 @@ const formattedDateAndTimeHtml = computed(() => {
   @media screen and (max-width: 600px) {
     margin-bottom: 24px;
     margin-right: 0;
-
   }
 }
 
@@ -142,7 +141,7 @@ const formattedDateAndTimeHtml = computed(() => {
 
 button {
   display: flex;
-  align-items: center;
+  align-items: end;
   background-color: #000000;
   color: #FFFFFF;
   border-width: 0;
@@ -150,10 +149,10 @@ button {
   padding-inline: 0;
   padding: 16px 24px;
   font: inherit;
-  font-size: 1rem;
   white-space: nowrap;
 
   @media screen and (max-width: 600px) {
+    align-items: center;
     padding: 8px 16px;
   }
 }

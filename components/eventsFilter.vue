@@ -9,8 +9,11 @@
     </div>
       <div v-if="openMenu" class="menu-wrapper">
         <div class="menu">
-          <div class="item" :class="{'active': active && isSelectedItem(item)}" 
-            v-for="(item, i) in items" :key="i" 
+          <div 
+            class="item" 
+            :class="{'active': active && isSelectedItem(item)}" 
+            v-for="(item, i) in items" 
+            :key="i" 
             @click="selectItem(item)">{{ item }}
           </div>
         </div>
@@ -18,11 +21,10 @@
   </div>
 </template>
 <script setup lang="ts">
-const props = defineProps<{title: string, items: string[]}>()
+defineProps<{title: string, items: string[]}>()
 const selected = defineModel<string>()
 
 const openMenu = ref(false)
-
 const active = computed(() => !!selected.value)
 
 function selectItem(item: string) {
@@ -32,7 +34,7 @@ function selectItem(item: string) {
     selected.value = item;
 }
 
-const isSelectedItem = (item: string )=> selected.value === item
+const isSelectedItem = (item: string ) => selected.value === item
 </script>
 <style>
 .events-filter {
@@ -54,7 +56,7 @@ const isSelectedItem = (item: string )=> selected.value === item
 .select {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border-bottom: 0.5px solid;
   background-color: #ffffff;
   cursor: pointer;
@@ -71,7 +73,6 @@ const isSelectedItem = (item: string )=> selected.value === item
   left: 0%;
   z-index: 3;
   min-width: 448px;
-  transition: all 0.5s;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 600px) {
