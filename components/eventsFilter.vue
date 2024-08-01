@@ -42,6 +42,7 @@ const setMenuPosition = async () => {
 
   const filterEl = document.querySelector('.filter')
   if (!filterEl) return
+
   const filterRect = filterEl.getBoundingClientRect()
   const eventsFilterRect = eventsFilter.value.getBoundingClientRect()
   
@@ -75,15 +76,16 @@ watch(openMenu, async (newVal) => {
   }
 })
 </script>
-<style>
+<style scoped>
 .events-filter {
   display: flex;
   flex-direction: row;
   position: relative;
-  margin-right: 1.78rem;
+  margin-right: 32px;
+  font-weight: 500;
 
   @media screen and (max-width: 600px) {
-    font-size: 0.67rem; 
+    font-size: 12px; 
   }
 }
 
@@ -95,7 +97,7 @@ watch(openMenu, async (newVal) => {
 .select {
   display: flex;
   align-items: center;
-  padding: 0.44rem 0.89rem;
+  padding: 8px 16px;
   border-bottom: 0.03rem solid; 
   background-color: #ffffff;
   cursor: pointer;
@@ -111,24 +113,24 @@ watch(openMenu, async (newVal) => {
   top: 100%;
   left: 0%;
   z-index: 3;
-  box-shadow: 0px 0.44rem 0.89rem 0px rgba(0, 0, 0, 0.2); 
-  padding: 0.44rem 1.78rem; 
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 8px 32px;
   color: #000000;
   max-width: 480px; 
   box-sizing: border-box; 
 
   @media screen and (max-width: 600px) {
-    font-size: 0.78rem; 
-    padding: 0.44rem 0.89rem; 
+    font-size: 14px; 
+    padding: 8px 16px;
     max-width: 360px;
   }
 }
 
 .item {
-  padding: 0.67rem 0;
+  padding: 12px 0;
 
   @media screen and (max-width: 600px) {
-    padding: 0.44rem 0; 
+    padding: 8px 0; 
   }
 }
 
@@ -137,8 +139,7 @@ watch(openMenu, async (newVal) => {
   border-color: #9747FF;
 }
 
-.nuxt-icon svg {
-  margin-bottom: 0;
-  font-size: 1.5rem;
+.nuxt-icon {
+  font-size: 24px;
 }
 </style>

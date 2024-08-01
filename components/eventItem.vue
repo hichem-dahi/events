@@ -47,89 +47,89 @@ const active = ref(false)
   return [formattedDateHtml, formattedTimeHtml]
 })
 </script>
-<style>
+<style scoped>
 .event-item {
   display: flex;
   flex-direction: row;
-  padding: 0 1.78rem 1.78rem 0;  
-  margin-bottom: 1.78rem;  
-  overflow-x: visible;
+  padding: 0 0 32px 0;
   transition: all 0.5s ease;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 600px) {
     display: block;
-    padding: 0 1.78rem 1.33rem 0;  
+    padding: 0 32px 24px 0;
   }
 }
 
 .event-item:hover {
   background-color: #DEDEDE;
-  padding: 0.89rem 0.89rem 1.78rem 0.89rem;  
+  padding: 16px 16px 32px 16px;
   transition: all 0.5s ease;
 
   @media screen and (max-width: 600px) {
-    padding-bottom: 0 0 1.33rem 0; 
+    padding-bottom: 0 0 24px 0;
   }
 }
 
 .info {
+  margin-right: 32px;
   flex-grow: 1;
-  margin-right: 1.78rem; 
 
   @media screen and (max-width: 600px) {
-    margin-bottom: 1.33rem; 
+    margin-bottom: 24px;
     margin-right: 0;
+
   }
 }
 
 .info-box {
-  margin: 0.44rem 0; 
+  margin: 8px 0;
 }
 
 .category {
   display: inline-block;
-  padding: 0.22rem 0.44rem; 
+  padding: 4px 8px;
   color: #FFFFFF;
   background-color: #000000;
   line-height: 100%;
-  font-size: 0.78rem;  
+  font-size: 14px;
 }
 
 .event-name {
   font-weight: 700;
-  font-size: 2.67rem; 
+  font-size: 48px;
 
   @media screen and (max-width: 600px) {
-    font-size: 1.78rem; 
+    font-size: 32px;
   }
 }
 
 .description {
-  font-size: 2rem; 
+  font-size: 36px;  
 
   @media screen and (max-width: 600px) {
-    font-size: 1.33rem;  
+    font-size: 24px;
   }
 }
 
 .date {
   font-weight: 300;
-  max-width: 250px; 
+  max-width: 250px;
   width: 100%;
-  margin-right: 1.78rem;  
+  margin-right: 32px;
   white-space: nowrap;
+  flex-shrink: 1;
 
   @media screen and (max-width: 600px) {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
-    margin-bottom: 1.33rem;  
+    margin-bottom: 24px;
   }
 }
 
 .day {
   @media screen and (max-width: 600px) {
-    margin-right: 0.44rem; 
+    margin-right: 8px;
   }
 }
 
@@ -137,31 +137,29 @@ const active = ref(false)
   display: flex;
   flex-direction: row;
   justify-content: end;
-  max-width: 250px; 
+  max-width: 250px;
   width: 100%;
+  flex-shrink: 1;
 
   @media screen and (max-width: 600px) {
     display: block;
-    max-width: 100%; 
-
   }
 }
 
 button {
   display: flex;
-  align-items: end;
   background-color: #000000;
   color: #FFFFFF;
   border-width: 0;
-  margin-bottom: 0.44rem;  
+  margin-bottom: 8px;
   padding-inline: 0;
-  padding: 0.89rem 1.33rem;  
+  padding: 16px 24px;
   font: inherit;
   white-space: nowrap;
+  align-items: center;
 
   @media screen and (max-width: 600px) {
-    align-items: center;
-    padding: 0.44rem 0.89rem; 
+    padding: 8px 16px;
   }
 }
 
@@ -178,8 +176,7 @@ button {
   }
 }
 
-.nuxt-icon svg {
-  margin-bottom: 0;
-  font-size: 1.5rem;
+.nuxt-icon {
+  font-size: 24px;
 }
 </style>

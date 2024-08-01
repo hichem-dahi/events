@@ -46,44 +46,39 @@ watch(isError, (isError) => {
 })
 </script>
 <style>
-.container {
-  width: 84%;
-  margin: 0 auto;
-  @media screen and (max-width: 600px) {
-    min-width: 100%;
-  }
-}
-
 .wrapper {
   @media screen and (max-width: 600px) {
-    margin: 0 0.44rem; 
+    margin: 0 8px;
   }
 }
 
 .events-list {
-  margin: 0 0.44rem; 
-
+  margin: 0 8px;
+  
   @media screen and (max-width: 600px) {
-    margin: 1.33rem 0 0 0; 
+    margin: 24px 0 0 0;
   }
 }
 
 .header {
-  padding: 8rem 0 2rem 0; 
+  padding: 128px 0 32px 0;
+
+  @media screen and (max-width: 600px) {
+    padding: 88px 0 24px 0;
+  }
 }
 
 .title {
   font-weight: bold;
-  font-size: 3.33rem; 
+  font-size: 60px;
 
   @media screen and (max-width: 600px) {
-    font-size: 2.5rem; 
+    font-size: 48px;
   }
 }
 
 .filter {
   display: flex;
-  padding-bottom: 1.78rem; 
+  padding-bottom: 32px;
 }
-
 </style>
