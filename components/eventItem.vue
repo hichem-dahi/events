@@ -129,7 +129,7 @@ const active = ref(false)
 
 .day {
   @media screen and (max-width: 600px) {
-    margin-right: 8px;
+    margin-right: 5px;
   }
 }
 
