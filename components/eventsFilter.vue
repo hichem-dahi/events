@@ -142,4 +142,7 @@ watch(openMenu, async (newVal) => {
 .nuxt-icon {
   font-size: 24px;
 }
+.nuxt-icon svg {
+  margin-bottom: 0 !important;
+}
 </style>

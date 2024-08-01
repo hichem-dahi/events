@@ -179,4 +179,9 @@ button {
 .nuxt-icon {
   font-size: 24px;
 }
+
+.nuxt-icon svg {
+  margin-bottom: 4px !important;
+}
+
 </style>
