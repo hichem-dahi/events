@@ -28,9 +28,9 @@ describe('EventsFilter.vue', () => {
     const eventsFilter = wrapper.find('.events-filter')
 
     await eventsFilter.trigger('mouseover')
-    expect(wrapper.find('.menu-wrapper').exists()).toBe(true)
+    expect(wrapper.find('.menu').exists()).toBe(true)
     await eventsFilter.trigger('mouseleave')
-    expect(wrapper.find('.menu-wrapper').exists()).toBe(false)
+    expect(wrapper.find('.menu').exists()).toBe(false)
   })
 
   it('selects an item and adds active class', async () => {
