@@ -26,13 +26,15 @@ const { selected } = useEventsFiltersStore()
 const { data: events, isSuccess, isError, errorMessage, execute } = useGetEvents()
 execute()
 
-const locations = computed(() => new Set(events.value?.map(item => item.location)))
-const categories = computed(() => new Set(events.value?.map(item => item.category)))
+// Using Sets to computes unique locations and categories from the event data.
+const locations = computed(() => new Set(eventsStore.events.map(item => item.location)))
+const categories = computed(() => new Set(eventsStore.events.map(item => item.category)))
+
 const filteredEvents = computed(() => eventsStore.events.filter(item => 
   item.category.includes(selected.category) && 
   item.location.includes(selected.location)))
 
-
+// Watches the `isSuccess` and 'isError' reactive property to determine if the API call was successful.
 watch(isSuccess, (isSuccess) => {
   if(isSuccess && events.value) 
     eventsStore.events = events.value
@@ -54,32 +56,34 @@ watch(isError, (isError) => {
 
 .wrapper {
   @media screen and (max-width: 600px) {
-    margin: 0 8px;
+    margin: 0 0.44rem; 
   }
 }
 
 .events-list {
-  margin: 0 8px;
+  margin: 0 0.44rem; 
+
   @media screen and (max-width: 600px) {
-    margin: 24px 0 0 0;
+    margin: 1.33rem 0 0 0; 
   }
 }
 
 .header {
-  padding: 8rem 0 2rem 0;
+  padding: 8rem 0 2rem 0; 
 }
 
 .title {
   font-weight: bold;
-  font-size: 3.33rem;
+  font-size: 3.33rem; 
 
   @media screen and (max-width: 600px) {
-    font-size: 2.5rem;
+    font-size: 2.5rem; 
   }
 }
 
 .filter {
   display: flex;
-  padding-bottom: 32px;
+  padding-bottom: 1.78rem; 
 }
+
 </style>
