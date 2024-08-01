@@ -5,7 +5,7 @@
     > 
     <div class="select">
       <div>{{ title }}</div> 
-      <nuxt-icon name="chevron-down" filled></nuxt-icon>
+      <nuxt-icon class="chevron-icon" name="chevron-down" filled></nuxt-icon>
     </div>
     <div v-if="openMenu" ref="menu" class="menu">
       <div class="item" 
@@ -76,10 +76,11 @@ watch(openMenu, async (newVal) => {
   }
 })
 </script>
-<style scoped>
+<style>
 .events-filter {
   display: flex;
   flex-direction: row;
+  align-items: center;
   position: relative;
   margin-right: 32px;
   font-weight: 500;
@@ -139,10 +140,11 @@ watch(openMenu, async (newVal) => {
   border-color: #9747FF;
 }
 
-.nuxt-icon {
+.chevron-icon {
   font-size: 24px;
 }
-.nuxt-icon svg {
-  margin-bottom: 0 !important;
+
+.chevron-icon svg {
+  margin-bottom: 0;
 }
 </style>

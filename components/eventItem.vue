@@ -19,7 +19,7 @@
       <div>  
         <button :class="{'active-button': active}">
           <div>Buy tickets</div> 
-          <nuxt-icon name="shop" filled></nuxt-icon>
+          <nuxt-icon class="shop-icon" name="shop" filled></nuxt-icon>
         </button>
         <div class="price">{{ event.price }}€</div>
       </div>
@@ -35,7 +35,7 @@ const active = ref(false)
 
 /**
  * Generates HTML strings to display the event's date and time with inline styles.
- * @returns {Array<string>} - Array of HTML strings:
+ * Returns Array of HTML strings:
  *   - **Index 0**: HTML string for the formatted date.
  *   - **Index 1**: HTML string for the formatted time.
  */
@@ -47,7 +47,7 @@ const active = ref(false)
   return [formattedDateHtml, formattedTimeHtml]
 })
 </script>
-<style scoped>
+<style>
 .event-item {
   display: flex;
   flex-direction: row;
@@ -176,11 +176,11 @@ button {
   }
 }
 
-.nuxt-icon {
+.shop-icon {
   font-size: 24px;
 }
 
-.nuxt-icon svg {
+.shop-icon svg {
   margin-bottom: 4px !important;
 }
 
