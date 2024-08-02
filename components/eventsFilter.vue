@@ -142,6 +142,7 @@ watch(openMenu, async (newVal) => {
 
 .chevron-icon {
   font-size: 24px;
+  line-height: 100%;
 }
 
 .chevron-icon svg {
