@@ -67,7 +67,7 @@ const active = ref(false)
   transition: all 0.5s ease;
 
   @media screen and (max-width: 600px) {
-    padding-bottom: 0 0 24px 0;
+    padding-bottom: 24px;
   }
 }
 
